@@ -1,0 +1,24 @@
+name: Entregables
+
+on: 
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Paso 1 - Checkout Repositorio
+        uses: actions/checkout@v4
+      - name: Paso 2 - Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9.2'
+      - name: Paso 3 - Crear Entorno Virtual
+        run: python -m venv venv      
+      - name: Paso 4 - Activar Entorno Virtual
+        run: ./venv/Scripts/activate
+      - name: Paso 5 - Ejecutar script
+        run: python hola.py
