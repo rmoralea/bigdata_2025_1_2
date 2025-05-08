@@ -21,4 +21,4 @@ jobs:
       - name: Paso 4 - Activar Entorno Virtual
         run: ./venv/Scripts/activate
       - name: Paso 5 - Ejecutar script
-        run: python hola.py
+        run: python src/edu_bigdata/main.py
