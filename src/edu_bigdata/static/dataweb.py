@@ -8,7 +8,7 @@ import datetime
 
 class DataWeb:
     def __init__(self):
-        self.url = "https://es.finance.yahoo.com/quote/DOLA-USD/history/"
+        self.url = "https://es.finance.yahoo.com/quote/DOPUSD%3DX/history/?frequency=1mo"
     
 
     def obtener_datos(self):
