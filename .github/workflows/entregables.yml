@@ -20,5 +20,9 @@ jobs:
         run: python -m venv venv      
       - name: Paso 4 - Activar Entorno Virtual
         run: ./venv/Scripts/activate
-      - name: Paso 5 - Ejecutar script
+      - name: Paso 5 - Actalizar pip
+        run: pip install --upgrade pip
+      - name: Paso 6 - Instalar dependencias
+        run: pip install -e .
+      - name: Paso 7 - Ejecutar Script
         run: python src/edu_bigdata/main.py
